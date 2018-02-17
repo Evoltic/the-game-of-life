@@ -4,9 +4,6 @@ $button-clicked: translate(1px, 3px);
 $table-cell-size: 12px;
 $table-width: ($table-cell-size + 2px) * 50;
 
-:export {
-  buttonClicked: $button-clicked
-}
 
 body {
   min-height: 100vh;

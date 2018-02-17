@@ -1,0 +1,84 @@
+
+$white: #ffeaee;
+$button-clicked: translate(1px, 3px);
+$table-cell-size: 12px;
+$table-width: ($table-cell-size + 2px) * 50;
+
+:export {
+  buttonClicked: $button-clicked
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background: #da4453;
+}
+
+.fa-info-circle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  color: $white;
+  cursor: pointer;
+}
+
+.game {
+  .buttons-block {
+    position: relative;
+  }
+
+  .buttons-block__buttons {
+    width: $table-width;
+    position: absolute;
+    top: -5px;
+    left: -3px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 50px 50px 1fr 50px;
+    button {
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: $white;
+      transition: transform 0.1s;
+    }
+    .stop:active {
+      transform: $button-clicked;
+    }
+    //"Generation: "
+    p {
+      font-family: 'Fredoka One', cursive;
+      color: $white;
+      letter-spacing: 1.3px;
+    }
+  }
+
+  .buttons-block__shadows {
+    width: $table-width;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 50px 50px 1fr 50px;
+    opacity: 0.10;
+    filter: blur(1.5px);
+  }
+
+  table {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-collapse: collapse;
+    background-color: $white;
+    td {
+      border: 0.1px solid rgba(255,77,108, 0.15);
+      width: $table-cell-size;
+      height: $table-cell-size;
+    }
+  }
+}

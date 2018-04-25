@@ -2,7 +2,6 @@
 $white: #ffeaee;
 $button-clicked: translate(1px, 3px);
 $table-cell-size: 12px;
-$table-width: ($table-cell-size + 2px) * 50;
 
 
 body {
@@ -31,7 +30,7 @@ body {
   }
 
   .buttons-block__buttons {
-    width: $table-width;
+    width: 100%;
     position: absolute;
     top: -5px;
     left: -3px;
@@ -59,7 +58,7 @@ body {
   }
 
   .buttons-block__shadows {
-    width: $table-width;
+    width: 100%;
     display: grid;
     justify-items: center;
     align-items: center;
